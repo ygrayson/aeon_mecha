@@ -3,7 +3,7 @@ import aeon.io.device as _device
 import aeon.schema.core as _stream
 
 def photodiode(pattern):
-    return { "Photodiode": _reader.Harp(f"{pattern}_44_*", columns=['adc', 'encoder']) }
+    return { "Photodiode": _reader.Harp(f"{pattern}_44_*", columns=['adc', 'encoder', 'dont-know']) }
 
 class OSC:
     @staticmethod

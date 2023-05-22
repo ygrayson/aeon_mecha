@@ -39,7 +39,7 @@ def chunk_key(file):
     epoch = file.parts[-3]
     chunk_str = file.stem.split("_")[-1]
     try:
-        date_str, time_str = chunk_str.split("T")
+        date_str, time_str = chunk_str.split("T") #@IgnoreException
     except ValueError:
         epoch = file.parts[-2]
         date_str, time_str = epoch.split("T")
